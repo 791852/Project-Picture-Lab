@@ -36,20 +36,23 @@ public class PictureTester
   }
   
   /** Method to test the collage method */
-  //public static void testCollage()
-  //{
-   // Picture canvas = new Picture("640x480.jpg");
-   // canvas.createCollage();
-   // canvas.explore();
- // }
+  public static void testMyCollage()
+  {
+   Picture canvas = new Picture("640x480.jpg");
+    canvas.myCollage();
+    canvas.explore();
+  }
   
   /** Method to test edgeDetection */
-  //public static void testEdgeDetection()
- // {
-  //  Picture swan = new Picture("swan.jpg");
-  //  swan.edgeDetection(10);
-  //  swan.explore();
-  //}
+  public static void testEdgeDetection()
+  {
+   Picture temple = new Picture("temple.jpg");
+   temple.edgeDetection(20);
+   temple.explore();
+   Picture myFace = new Picture("myFace.jpg");
+   myFace.edgeDetection(2);
+   myFace.explore();
+  }
   /** Method to test mirrorverticalrighttoleft */
   public static void testMirrorVerticalRightToLeft()
   {
@@ -86,7 +89,20 @@ public class PictureTester
     seagull.mirrorGull();
     seagull.explore();
    }
-  
+    public static void testCopy()
+  {
+      Picture seagull = new Picture("seagull.jpg");
+    seagull.explore();
+    seagull.copy(seagull, 50, 80);
+    seagull.explore();
+   }
+     public static void testCopyPartial()
+  {
+      Picture koala = new Picture("koala.jpg");
+    koala.explore();
+    koala.copyPartial(koala, 20, 20, 150, 150);
+    koala.explore();
+   }
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -107,11 +123,12 @@ public class PictureTester
     //testHorizontal();
     //testMirrorTemple();
     //testMirrorArms();
-    testMirrorGull();
+    //testMirrorGull();
     //testMirrorDiagonal();
-    //testCollage();
+    //testMyCollage();
     //testCopy();
-    //testEdgeDetection();
+    //testCopyPartial();
+    testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
